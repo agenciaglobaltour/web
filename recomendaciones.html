@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips y Recomendaciones | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS RECOMENDACIONES --- */
+        .tips-hero { 
+            background: linear-gradient(rgba(0, 82, 134, 0.8), rgba(0, 51, 85, 0.8)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            padding: 100px 0; 
+            color: white; 
+            border-bottom: 4px solid var(--dorado);
+        }
+
+        .faq-section { margin: 60px auto; max-width: 900px; }
+        .faq-category { margin-bottom: 50px; }
+        
+        .cat-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .cat-icon { font-size: 2rem; color: var(--dorado); }
+        .category-title { color: var(--azul-corp); font-size: 1.6rem; margin: 0; }
+
+        .accordion {
+            background-color: white;
+            color: var(--texto);
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: 0.3s;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .active, .accordion:hover { background-color: var(--gris-claro); color: var(--azul-corp); }
+        .accordion:after { content: '\002B'; font-size: 1.5rem; color: var(--dorado); font-weight: bold; }
+        .active:after { content: "\2212"; }
+
+        .panel {
+            padding: 0 20px;
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .panel p { padding: 20px 0; font-size: 0.95rem; color: #555; line-height: 1.7; }
+        .panel ul { padding-bottom: 20px; padding-left: 20px; color: #555; }
+        .panel ul li { margin-bottom: 8px; list-style: disc; }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="tips-hero">
+        <div class="container">
+            <h1>Guía del Viajero Inteligente</h1>
+            <p style="margin-top:15px; font-size:1.2rem;">Información clave para que tu única preocupación sea disfrutar.</p>
+        </div>
+    </div>
+
+    <div class="container faq-section">
+
+        <div class="faq-category">
+            <div class="cat-header">
+                <i class="fas fa-suitcase-rolling cat-icon"></i>
+                <h2 class="category-title">Todo sobre Equipaje</h2>
+            </div>
+            
+            <button class="accordion">¿Qué puedo llevar en el Equipaje de Mano?</button>
+            <div class="panel">
+                <p>El equipaje de mano es el que llevas contigo en la cabina (generalmente una maleta de 8-10kg y un artículo personal).
+                <br><br>
+                <strong>Regla de Líquidos (LAGs):</strong> Envases de máximo 100ml, todos dentro de una bolsa transparente de 1 litro.
+                <br><br>
+                <strong>Prohibido:</strong> Objetos cortopunzantes (tijeras, navajas), herramientas, armas, explosivos y líquidos de más de 100ml.</p>
+            </div>
+
+            <button class="accordion">¿Cuáles son las medidas estándar de las maletas?</button>
+            <div class="panel">
+                <p>Aunque varía por aerolínea, las medidas generales son:</p>
+                <ul>
+                    <li><strong>Artículo Personal (Mochila/Cartera):</strong> Debe caber debajo del asiento (aprox. 45 x 35 x 20 cm).</li>
+                    <li><strong>Equipaje de Mano (Carry On):</strong> Aprox. 55 x 35 x 25 cm (incluyendo ruedas).</li>
+                    <li><strong>Bodega (23kg):</strong> La suma de sus lados no debe exceder 158 cm lineales.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">¿Qué pasa si mi maleta se pierde?</button>
+            <div class="panel">
+                <p>1. No salgas de la zona de equipaje sin hacer el reclamo (PIR) en el mostrador de la aerolínea.<br>
+                2. Conserva tu ticket de equipaje (el sticker que te dan al check-in).<br>
+                3. Si tienes nuestro Seguro de Viaje, contáctanos inmediatamente para gestionar tu compensación.</p>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <div class="cat-header">
+                <i class="fas fa-passport cat-icon"></i>
+                <h2 class="category-title">Documentación y Trámites</h2>
+            </div>
+
+            <button class="accordion">Vigencia del Pasaporte (Regla de los 6 meses)</button>
+            <div class="panel">
+                <p>Para viajar a casi cualquier país del mundo, tu pasaporte debe tener al menos <strong>6 meses de vigencia</strong> restantes desde la fecha de tu regreso. Si vence antes, no te dejarán abordar.</p>
+            </div>
+
+            <button class="accordion">Permiso de Salida de Menores</button>
+            <div class="panel">
+                <p>Si un menor de edad viaja solo con uno de sus padres o con terceros, necesita obligatoriamente un <strong>Permiso de Salida notariado</strong> firmado por el padre/madre que no viaja.</p>
+            </div>
+
+            <button class="accordion">Vacuna de Fiebre Amarilla</button>
+            <div class="panel">
+                <p>Es obligatoria o altamente recomendada para viajar a destinos tropicales como Brasil, Panamá, Tailandia y ciertas zonas de la selva ecuatoriana. Debes ponértela al menos 10 días antes del viaje.</p>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <div class="cat-header">
+                <i class="fas fa-plane-departure cat-icon"></i>
+                <h2 class="category-title">En el Aeropuerto</h2>
+            </div>
+
+            <button class="accordion">¿Con cuánta anticipación debo llegar?</button>
+            <div class="panel">
+                <ul>
+                    <li><strong>Vuelos Nacionales:</strong> 2 horas antes de la salida.</li>
+                    <li><strong>Vuelos Internacionales:</strong> 3 a 4 horas antes, especialmente en temporada alta.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Check-in Online</button>
+            <div class="panel">
+                <p>Recomendamos hacer el Check-in en la web de la aerolínea 24 horas antes del vuelo. Esto te permite elegir mejores asientos y, si solo llevas equipaje de mano, pasar directo a seguridad sin hacer fila en el mostrador.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+    <script>
+        // Lógica del acordeón
+        document.addEventListener('DOMContentLoaded', function() {
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

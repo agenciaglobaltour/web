@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Internacional | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS INTERNACIONAL --- */
+        .page-header { 
+            background: linear-gradient(rgba(0, 82, 134, 0.7), rgba(0, 82, 134, 0.7)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c05a?q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0; 
+            text-align: center; 
+            color: white;
+            border-bottom: 4px solid var(--dorado); 
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px auto;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .tour-card:hover { transform: translateY(-10px); }
+
+        .tour-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .price-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: var(--dorado);
+            color: var(--azul-oscuro);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+        }
+
+        .tour-info { padding: 25px; }
+        .tour-title { font-size: 1.3rem; color: var(--azul-corp); font-weight: 700; margin-bottom: 10px; }
+        .tour-info p { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+
+        .btn-tour {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: var(--azul-corp);
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-tour:hover { background: var(--dorado); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Destinos Internacionales</h1>
+            <p>El mundo te espera. Nosotros te llevamos con todo planificado.</p>
+        </div>
+    </div>
+
+    <div class="container grid-3">
+        <div class="tour-card">
+            <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=1000');">
+                <span class="price-tag">Desde $899</span>
+            </div>
+            <div class="tour-info">
+                <div class="tour-title">Europa Clásica</div>
+                <p>Madrid, París y Roma. 12 días con hoteles y tours incluidos.</p>
+                <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20deseo%20información%20sobre%20Europa%20Clásica" class="btn-tour">Consultar Disponibilidad</a>
+            </div>
+        </div>
+
+        <div class="tour-card">
+            <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1000');">
+                <span class="price-tag">Desde $1,250</span>
+            </div>
+            <div class="tour-info">
+                <div class="tour-title">Orlando Mágico</div>
+                <p>Ingresos a Disney y Universal Studios + Hospedaje y auto.</p>
+                <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20deseo%20información%20sobre%20Orlando" class="btn-tour">Consultar Disponibilidad</a>
+            </div>
+        </div>
+
+        <div class="tour-card">
+            <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1534008843454-b39e52a6a26f?q=80&w=1000');">
+                <span class="price-tag">Desde $750</span>
+            </div>
+            <div class="tour-info">
+                <div class="tour-title">Punta Cana All Inclusive</div>
+                <p>5 Días de relax total con todo incluido frente al mar Caribe.</p>
+                <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20deseo%20información%20sobre%20Punta%20Cana" class="btn-tour">Consultar Disponibilidad</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; margin-bottom: 60px;">
+        <h2 style="color: var(--azul-oscuro);">¿Buscas otro destino?</h2>
+        <p style="color: #666; margin-bottom: 30px;">Diseñamos paquetes a medida según tus fechas y presupuesto.</p>
+        <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20quiero%20un%20viaje%20personalizado" class="btn-tour" style="display:inline-block; padding: 15px 40px; border-radius: 50px;">Hablar con un Agente</a>
+    </div>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+
+</body>
+</html>

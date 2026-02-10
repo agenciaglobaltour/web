@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría de Viajes | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS ASESORÍA --- */
+        .asesoria-hero { 
+            background: linear-gradient(rgba(0, 51, 85, 0.8), rgba(0, 51, 85, 0.8)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+            border-top: 4px solid var(--dorado);
+        }
+        .benefit-card:hover { transform: translateY(-10px); }
+        .benefit-card i { font-size: 3rem; color: var(--azul-corp); margin-bottom: 20px; }
+
+        .why-us { background-color: var(--gris-claro); padding: 80px 0; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+
+        .btn-large { 
+            display: inline-block; 
+            padding: 18px 45px; 
+            background-color: var(--azul-corp); 
+            color: white; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            font-size: 1.1rem; 
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(0,82,134,0.3);
+            transition: 0.3s;
+        }
+        .btn-large:hover { background-color: var(--dorado); transform: scale(1.05); color: var(--azul-oscuro); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="asesoria-hero">
+        <div class="container">
+            <h1>Expertos en Planificación de Viajes</h1>
+            <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.9;">Transformamos tus ideas en itinerarios perfectos y seguros.</p>
+        </div>
+    </div>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--azul-corp); margin-bottom: 50px;">Nuestra Optimización de Viaje</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="benefit-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3 style="color: var(--azul-oscuro); margin-bottom: 15px;">Rutas Inteligentes</h3>
+                    <p style="color: #666;">Diseñamos itinerarios lógicos para que pases más tiempo disfrutando y menos tiempo en traslados innecesarios.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-star"></i>
+                    <h3 style="color: var(--azul-oscuro); margin-bottom: 15px;">Experiencias Locales</h3>
+                    <p style="color: #666;">Te recomendamos lugares auténticos fuera de las guías comerciales para que vivas la cultura real de cada destino.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3 style="color: var(--azul-oscuro); margin-bottom: 15px;">Presupuesto Optimizado</h3>
+                    <p style="color: #666;">Analizamos la mejor relación calidad-precio en cada servicio para que tu inversión rinda al máximo sin perder confort.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="color: var(--azul-oscuro);">¿Por qué elegir nuestra asesoría?</h2>
+                <p style="margin-top: 20px; font-size: 1.1rem;">A diferencia de comprar por internet, con nosotros obtienes respaldo humano y experiencia profesional.</p>
+            </div>
+
+            <div class="why-grid">
+                <div style="background: white; padding: 40px; border-radius: 15px;">
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--dorado); margin-right: 10px;"></i> <strong>Soporte Real:</strong> Si tu vuelo se cancela, nosotros gestionamos la solución con la aerolínea.</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--dorado); margin-right: 10px;"></i> <strong>Documentación al día:</strong> Te informamos sobre vacunas y requisitos de entrada vigentes.</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--dorado); margin-right: 10px;"></i> <strong>Sin letra chica:</strong> Explicación clara de qué incluye y qué no incluye cada reserva.</li>
+                    </ul>
+                </div>
+                <div style="background: var(--azul-corp); color: white; padding: 40px; border-radius: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h3>¿Listo para empezar?</h3>
+                    <p style="margin: 15px 0 25px; opacity: 0.9;">Agenda una llamada o visítanos en nuestra oficina.</p>
+                    <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20quisiera%20asesoria%20para%20un%20viaje" class="btn-large" style="background-color: var(--dorado); color: var(--azul-oscuro);">
+                        <i class="fab fa-whatsapp"></i> Hablar con un Asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+</body>
+</html>

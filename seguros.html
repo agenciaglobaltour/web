@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros de Viaje | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS SEGUROS --- */
+        .insurance-hero { 
+            background: linear-gradient(rgba(0, 82, 134, 0.8), rgba(0, 51, 85, 0.8)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            padding: 100px 0; 
+            color: white; 
+            border-bottom: 4px solid var(--dorado);
+        }
+
+        .reasons-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+            margin: 40px 0 60px 0; 
+        }
+        
+        .reason-card { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            transition: transform 0.3s ease;
+        }
+        .reason-card:hover { transform: translateY(-10px); }
+        .reason-icon { font-size: 3rem; color: #25D366; margin-bottom: 20px; }
+        .reason-card h3 { color: var(--azul-corp); margin-bottom: 15px; font-size: 1.3rem; }
+        .reason-card p { color: #666; font-size: 0.95rem; }
+
+        .alert-section { 
+            background-color: #FFF3CD; 
+            padding: 30px 20px; 
+            border-radius: 10px; 
+            border-left: 6px solid #ffc107; 
+            margin: 40px 0; 
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+        }
+        .alert-icon { font-size: 3rem; color: #ffc107; }
+
+        .coverage-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 30px; 
+            margin: 40px 0; 
+        }
+        
+        .coverage-card { 
+            text-align: center;
+            padding: 30px 20px; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+            border-bottom: 4px solid var(--dorado);
+            transition: 0.3s;
+        }
+        .coverage-card:hover { transform: translateY(-5px); background-color: #fafafa; }
+        .cov-icon { font-size: 2.5rem; color: #25D366; margin-bottom: 20px; }
+        .coverage-card h3 { color: var(--azul-corp); margin-bottom: 10px; font-size: 1.2rem; }
+        .coverage-card p { font-size: 0.9rem; color: #666; }
+
+        .btn-large { display: inline-block; padding: 15px 40px; background-color: var(--azul-corp); color: white; font-weight: bold; border-radius: 50px; font-size: 1.1rem; margin-top: 20px; text-decoration: none;}
+        .btn-large:hover { background-color: var(--dorado); color: var(--azul-oscuro); }
+
+        @media (max-width: 900px) { 
+            .alert-section { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="insurance-hero">
+        <div class="container">
+            <h1>Tu Seguridad no es Negociable</h1>
+            <p style="margin-top:15px; font-size:1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Más allá de un requisito, el seguro de viaje es tu respaldo ante cualquier imprevisto lejos de casa.
+            </p>
+            <a href="#cotizar" class="btn-large" style="background: var(--dorado); color: var(--azul-oscuro);">Proteger mi Viaje</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="text-align: center; margin-top: 60px;">
+            <h2 style="color: var(--azul-corp);">¿Por qué recomendamos viajar protegido?</h2>
+            <p style="color: #666;">Las eventualidades ocurren cuando menos las esperamos.</p>
+        </div>
+
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <i class="fas fa-user-md reason-icon"></i>
+                <h3>Salud en el Extranjero</h3>
+                <p>Una simple consulta médica en EE.UU. puede costar $500. Una apendicitis, más de $20.000. Nuestro seguro cubre estos gastos al 100%.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-suitcase-rolling reason-icon"></i>
+                <h3>Equipaje Protegido</h3>
+                <p>Si la aerolínea pierde tu maleta, recibes una compensación económica inmediata para comprar lo necesario mientras aparece.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-plane-slash reason-icon"></i>
+                <h3>Vuelos Cancelados</h3>
+                <p>Si pierdes una conexión o cancelan tu vuelo por clima, el seguro cubre tus gastos de hotel y alimentación.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="alert-section">
+            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div>
+                <h3 style="color: #856404; font-size:1.2rem; margin-bottom:5px;">¿Viajas a Europa?</h3>
+                <p style="color: #856404;">El Seguro de Viaje es <strong>OBLIGATORIO</strong> para ingresar al espacio Schengen. Debe tener una cobertura mínima de 30.000 euros. Nosotros emitimos pólizas 100% aceptadas por migración.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align: center; color: var(--azul-corp);">¿Qué cubren nuestros planes?</h2>
+        
+        <div class="coverage-grid">
+            <div class="coverage-card">
+                <i class="fas fa-user-md cov-icon"></i>
+                <h3>Asistencia Médica</h3>
+                <p>Cobertura por accidentes, enfermedades (incluido COVID-19) y emergencias odontológicas.</p>
+            </div>
+            <div class="coverage-card">
+                <i class="fas fa-suitcase cov-icon"></i>
+                <h3>Pérdida de Equipaje</h3>
+                <p>Compensación económica si la aerolínea pierde tu maleta o demora en entregarla.</p>
+            </div>
+            <div class="coverage-card">
+                <i class="fas fa-plane-slash cov-icon"></i>
+                <h3>Cancelación de Vuelo</h3>
+                <p>Reembolso de gastos si tienes que cancelar tu viaje por fuerza mayor o enfermedad grave.</p>
+            </div>
+            <div class="coverage-card">
+                <i class="fas fa-prescription-bottle-alt cov-icon"></i>
+                <h3>Medicamentos</h3>
+                <p>Cobertura de gastos farmacéuticos recetados durante tu hospitalización o consulta.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; padding: 60px 0;" id="cotizar">
+        <h2 style="color: var(--azul-oscuro);">Cotiza tu Seguro ahora</h2>
+        <p style="margin-bottom: 30px; color: #666;">Tenemos planes desde $5 USD diarios.</p>
+        <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20necesito%20cotizar%20un%20seguro%20de%20viaje" class="btn-large">
+            <i class="fab fa-whatsapp"></i> Solicitar Cotización
+        </a>
+    </div>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+
+</body>
+</html>

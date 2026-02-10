@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visas y Trámites | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS VISAS --- */
+        .visa-hero { 
+            background: linear-gradient(rgba(0, 82, 134, 0.9), rgba(0, 51, 85, 0.9)), url('https://images.unsplash.com/photo-1550570395-5858c973a876?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            padding: 80px 0; 
+            color: white; 
+        }
+        
+        .process-section { padding: 60px 0; text-align: center; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .process-card { background: white; padding: 30px 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 3px solid transparent; }
+        .process-card:hover { transform: translateY(-5px); border-bottom: 3px solid var(--dorado); }
+        .step-icon { font-size: 2.5rem; color: var(--azul-corp); margin-bottom: 20px; }
+        .step-title { font-size: 1.2rem; color: var(--azul-oscuro); margin-bottom: 10px; }
+        .step-desc { font-size: 0.9rem; color: #666; }
+
+        .req-section { background-color: var(--gris-claro); padding: 60px 0; }
+        .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-top: 30px; }
+        .req-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+        .req-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #eee; }
+        .req-header i { font-size: 2rem; color: var(--dorado); }
+        .req-list li { margin-bottom: 12px; display: flex; align-items: start; gap: 10px; list-style: none; }
+        .req-list i { color: #25D366; margin-top: 5px; }
+
+        .btn-large { display: inline-block; padding: 15px 50px; background-color: var(--azul-corp); color: white; font-weight: bold; border-radius: 50px; font-size: 1.1rem; margin-top: 40px; box-shadow: 0 10px 20px rgba(0,82,134,0.3); text-decoration: none; transition: 0.3s; }
+        .btn-large:hover { background-color: var(--dorado); transform: scale(1.05); color: var(--azul-oscuro); }
+
+        @media (max-width: 900px) { .req-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="visa-hero">
+        <div class="container">
+            <h1>Tu Visa Aprobada es Nuestra Meta</h1>
+            <p style="margin-top:10px; font-size:1.2rem;">Asesoría profesional, honesta y sin intermediarios.</p>
+        </div>
+    </div>
+
+    <section class="process-section">
+        <div class="container">
+            <h2 style="color: var(--azul-corp);">Nuestro Proceso Integral</h2>
+            <p>No solo llenamos formularios. Te acompañamos en cada etapa.</p>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="step-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3 class="step-title">1. Análisis de Perfil</h3>
+                    <p class="step-desc">Evaluamos tus arraigos (económico, familiar y laboral) para diseñar la mejor estrategia.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3 class="step-title">2. Llenado de Formularios</h3>
+                    <p class="step-desc">Completamos tu solicitud (DS-160 o Schengen) en inglés técnico y sin errores.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="step-title">3. Obtención de Citas</h3>
+                    <p class="step-desc">Monitoreamos el sistema consular 24/7 para conseguir o adelantar tu turno.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3 class="step-title">4. Preparación</h3>
+                    <p class="step-desc">Simulamos la entrevista con preguntas reales para que vayas seguro ante el cónsul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="req-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--azul-corp);">Requisitos Básicos</h2>
+            
+            <div class="req-grid">
+                <div class="req-card">
+                    <div class="req-header">
+                        <i class="fas fa-flag-usa"></i>
+                        <h3>Visa Americana (B1/B2)</h3>
+                    </div>
+                    <ul class="req-list">
+                        <li><i class="fas fa-check"></i> Pasaporte vigente (mínimo 6 meses).</li>
+                        <li><i class="fas fa-check"></i> Cédula de identidad.</li>
+                        <li><i class="fas fa-check"></i> Comprobantes de ingresos (Roles de pago, RUC, declaraciones).</li>
+                        <li><i class="fas fa-check"></i> Estados de cuenta bancarios (últimos 3 meses).</li>
+                        <li><i class="fas fa-check"></i> Datos de contacto en USA (Hotel o Familiar).</li>
+                    </ul>
+                </div>
+
+                <div class="req-card">
+                    <div class="req-header">
+                        <i class="fas fa-globe-europe"></i>
+                        <h3>Visa Schengen / ETIAS</h3>
+                    </div>
+                    <ul class="req-list">
+                        <li><i class="fas fa-check"></i> Pasaporte vigente (biométrico).</li>
+                        <li><i class="fas fa-check"></i> Seguro de viaje internacional (Cobertura €30k).</li>
+                        <li><i class="fas fa-check"></i> Reserva de vuelos (Ida y Vuelta).</li>
+                        <li><i class="fas fa-check"></i> Reserva de hotel o Carta de invitación.</li>
+                        <li><i class="fas fa-check"></i> Solvencia económica (aprox. €100 por día).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20quiero%20agendar%20una%20cita%20para%20Visa" class="btn-large">
+                    <i class="far fa-calendar-check"></i> Agendar Asesoría
+                </a>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                    * La aprobación depende exclusivamente de la autoridad consular.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+
+</body>
+</html>

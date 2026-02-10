@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros de Estudiantes | Global Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS ESTUDIANTES --- */
+        .student-hero { 
+            background: linear-gradient(rgba(0, 82, 134, 0.8), rgba(0, 51, 85, 0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            padding: 100px 0; 
+            color: white; 
+        }
+
+        .types-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 40px; 
+            margin: 60px 0; 
+        }
+        
+        .type-card { 
+            padding: 40px; 
+            border-radius: 20px; 
+            background: white; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            border-top: 6px solid var(--azul-corp);
+        }
+
+        .spain-card { 
+            border-top: 6px solid #C60B1E; 
+            background-color: #fff9f9;
+        }
+
+        .card-icon { font-size: 3rem; margin-bottom: 20px; display: block; text-align: center; }
+        .card-title { font-size: 1.5rem; color: var(--azul-corp); text-align: center; margin-bottom: 20px; }
+        .feature-list li { margin-bottom: 15px; display: flex; align-items: start; gap: 10px; font-size: 0.95rem; list-style: none; }
+        .feature-list i { color: #25D366; margin-top: 5px; }
+        .spain-card .feature-list i { color: #C60B1E; }
+
+        .general-features { background-color: var(--gris-claro); padding: 60px 0; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 30px; }
+        .feature-item { text-align: center; }
+        .feature-item i { font-size: 2rem; color: var(--dorado); margin-bottom: 10px; }
+        .feature-item h4 { color: var(--azul-corp); margin-bottom: 5px; }
+        .feature-item p { font-size: 0.9rem; color: #666; }
+
+        .btn-large { display: inline-block; padding: 15px 40px; background-color: var(--azul-corp); color: white; font-weight: bold; border-radius: 50px; font-size: 1.1rem; margin-top: 20px; text-decoration: none; }
+        .btn-large:hover { background-color: var(--dorado); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header"></header>
+
+    <div class="student-hero">
+        <div class="container">
+            <h1>Tu Futuro está fuera,<br>tu seguridad con nosotros.</h1>
+            <p style="margin-top:15px; font-size:1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Coberturas diseñadas para estudiantes internacionales. Cumple requisitos de embajada y viaja protegido.
+            </p>
+            <a href="#planes" class="btn-large" style="background: var(--dorado);">Ver Opciones</a>
+        </div>
+    </div>
+
+    <div class="container" id="planes">
+        <div style="text-align: center; margin-top: 60px;">
+            <h2 style="color: var(--azul-corp);">Elige tu destino de estudios</h2>
+            <p style="color: #666;">Tenemos el seguro exacto que te pide la universidad o el consulado.</p>
+        </div>
+
+        <div class="types-grid">
+            
+            <div class="type-card">
+                <i class="fas fa-globe-americas card-icon" style="color: var(--azul-corp);"></i>
+                <h3 class="card-title">Seguro Internacional<br>(Mundo / USA)</h3>
+                <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem;">Ideal para visas F-1, J-1, OPT y viajes largos (+1 mes).</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Atención 24/7:</strong> WhatsApp, correo y teléfono.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Sin tope de edad:</strong> Aprender no tiene edad.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Enfermedades Preexistentes:</strong> Cobertura incluida.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Ideal para estancias largas:</strong> Cobertura completa.</span></li>
+                </ul>
+                <div style="text-align: center;">
+                    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20cotizar%20seguro%20Internacional" class="btn-large" style="padding: 10px 30px; font-size: 0.9rem;">Cotizar Mundo</a>
+                </div>
+            </div>
+
+            <div class="type-card spain-card">
+                <i class="fas fa-flag card-icon" style="color: #C60B1E;"></i> 
+                <h3 class="card-title" style="color: #C60B1E;">Seguro Médico<br>ESPAÑA ????</h3>
+                <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; font-weight: bold;">Requisito Obligatorio de Embajada Española.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-exclamation-circle"></i> <span><strong>Autorizado en España:</strong> Cumple Ley de Extranjería.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Sin Copagos ni Carencias:</strong> 100% desde el primer día.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Sin Límites:</strong> Como el Sistema Nacional de Salud.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Repatriación:</strong> Incluida por fallecimiento o enfermedad.</span></li>
+                </ul>
+                <div style="text-align: center;">
+                    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20necesito%20seguro%20para%20España%20(Sin%20copago)" class="btn-large" style="padding: 10px 30px; font-size: 0.9rem; background-color: #C60B1E;">Cotizar España</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="general-features">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--azul-corp); margin-bottom: 30px;">Viaja tranquilo, tu familia también</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Especial para Estudiantes</h4>
+                    <p>Diseñado para estancias de 1 mes o más.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Cumplimiento de Visas</h4>
+                    <p>Pólizas aceptadas por consulados.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Salud Mental</h4>
+                    <p>Soporte emocional incluido.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-laptop-medical"></i>
+                    <h4>Telemedicina</h4>
+                    <p>Consulta médica desde tu residencia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; padding: 60px 0;">
+        <h2 style="color: var(--azul-oscuro);">¿Dudas sobre qué seguro necesitas?</h2>
+        <p style="margin-bottom: 30px; color: #666;">Envíanos el nombre de tu universidad o destino y te asesoramos gratis.</p>
+        <a href="https://wa.me/593XXXXXXXXX?text=Hola%20Global%20Tour,%20ayuda%20con%20seguro%20estudiantil" class="btn-large">
+            <i class="fab fa-whatsapp"></i> Hablar con un Asesor
+        </a>
+    </div>
+
+    <footer id="main-footer"></footer>
+
+    <script src="componentes.js"></script>
+
+</body>
+</html>
