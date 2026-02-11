@@ -1,5 +1,5 @@
 /**
- * Global Tour - Componentes Dinámicos
+ * Global Tour - Componentes Dinámicos con Menú Móvil
  */
 
 // 1. Datos De Contacto Y Canales De Atención
@@ -18,7 +18,7 @@ const contacto = {
     }
 };
 
-// 2. Generar el Encabezado (Header) con tu Logo corregido
+// 2. Generar el Encabezado (Header) con Botón Hamburguesa
 const headerHTML = `
     <header>
         <div class="container navbar">
@@ -26,7 +26,13 @@ const headerHTML = `
                 <img src="imagenes/logo-global.png" alt="Global Tour" style="height: 75px; vertical-align: middle;">
             </a>
             
-            <ul class="nav-menu">
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-list">
                 <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Viajes <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
@@ -60,19 +66,17 @@ const footerHTML = `
     <footer style="background-color: var(--azul-oscuro); color: var(--blanco); padding: 60px 0;">
         <div class="container" id="contacto">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-                
                 <div class="footer-col">
                     <h3 style="font-family: 'Montserrat';">Global Tour</h3>
                     <p style="margin-top: 15px; color: #ccc;">Agencia de Viajes y Turismo.<br>Expertos en Visas y Destinos Mundiales.</p>
                     <div style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">
                         <p><strong>Horarios:</strong></p>
                         <p>Lun - Vie: ${contacto.horarioLV}</p>
-                        <p>Sáb: ${contacto.horarioS}</p>
+                        <p>S&aacute;b: ${contacto.horarioS}</p>
                     </div>
                 </div>
-
                 <div class="footer-col">
-                    <h4 style="font-family: 'Montserrat'; border-bottom: 2px solid var(--dorado); display: inline-block; margin-bottom: 20px;">Atención al Cliente</h4>
+                    <h4 style="font-family: 'Montserrat'; border-bottom: 2px solid var(--dorado); display: inline-block; margin-bottom: 20px;">Atenci&oacute;n al Cliente</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--dorado); margin-right: 10px;"></i> ${contacto.direccion}</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-phone" style="color: var(--dorado); margin-right: 10px;"></i> ${contacto.telefono}</li>
@@ -80,19 +84,16 @@ const footerHTML = `
                         <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color: var(--dorado); margin-right: 10px;"></i> ${contacto.email}</li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
-                    <h4 style="font-family: 'Montserrat'; border-bottom: 2px solid var(--dorado); display: inline-block; margin-bottom: 20px;">Síguenos</h4>
+                    <h4 style="font-family: 'Montserrat'; border-bottom: 2px solid var(--dorado); display: inline-block; margin-bottom: 20px;">S&iacute;guenos</h4>
                     <div class="social-icons" style="display: flex; gap: 15px; margin-top: 10px;">
                         <a href="${contacto.redes.facebook}" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook-f"></i></a>
                         <a href="${contacto.redes.instagram}" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
                         <a href="${contacto.redes.tiktok}" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-tiktok"></i></a>
                     </div>
-                    <p style="margin-top: 20px; font-size: 0.85rem; color: #ccc;">Riobamba, Chimborazo – Ecuador</p>
+                    <p style="margin-top: 20px; font-size: 0.85rem; color: #ccc;">Riobamba, Chimborazo &ndash; Ecuador</p>
                 </div>
-
             </div>
-
             <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
                 <p>&copy; 2026 Global Tour Agencia de Viajes. Todos los derechos reservados.</p>
             </div>
@@ -100,24 +101,31 @@ const footerHTML = `
     </footer>
 `;
 
-// 4. Inyección en el DOM
+// 4. Inyección en el DOM y Lógica de Funcionamiento
 document.addEventListener("DOMContentLoaded", function() {
+    // Inyectar Header y Footer
     const headerElement = document.getElementById("main-header");
     const footerElement = document.getElementById("main-footer");
 
     if (headerElement) headerElement.innerHTML = headerHTML;
     if (footerElement) footerElement.innerHTML = footerHTML;
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    // ... tu código anterior de header y footer ...
+    // Lógica del Menú Hamburguesa
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
-    // NUEVO: Inyectar el botón flotante automáticamente
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active'); // Muestra/oculta el menú
+            menuToggle.classList.toggle('is-active'); // Para animar las barritas (opcional)
+        });
+    }
+
+    // Inyectar el botón flotante de WhatsApp
     const btnWhatsApp = document.createElement('a');
-    btnWhatsApp.href = `https://wa.me/${contacto.whatsapp1}`; // Usa el 593996397672 que ya pusimos en 'contacto'
+    btnWhatsApp.href = `https://wa.me/${contacto.whatsapp1}`;
     btnWhatsApp.className = 'whatsapp-float';
     btnWhatsApp.target = '_blank';
     btnWhatsApp.innerHTML = '<i class="fab fa-whatsapp"></i>';
     document.body.appendChild(btnWhatsApp);
-
 });
