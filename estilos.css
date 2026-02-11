@@ -31,7 +31,7 @@ ul { list-style: none; }
 .btn-outline { border: 2px solid var(--blanco); color: var(--blanco); margin-left: 10px; }
 .btn-outline:hover { background-color: var(--blanco); color: var(--azul-corp); }
 
-/* --- HEADER & NAVEGACIÃ“N --- */
+/* --- HEADER & NAVEGACIÓN --- */
 header {
     background-color: var(--azul-corp);
     height: 80px;
@@ -133,7 +133,7 @@ header {
 .card-info p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
 .card-link { color: var(--dorado); font-weight: 700; font-size: 0.9rem; }
 
-/* --- SECCIÃ“N VISAS --- */
+/* --- SECCIÓN VISAS --- */
 .visa-banner { background-color: var(--azul-corp); color: white; padding: 60px 0; text-align: center; margin: 40px 0; }
 .visa-icons { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
 .visa-item i { font-size: 2.5rem; margin-bottom: 10px; color: var(--dorado); }
@@ -176,9 +176,9 @@ footer { background-color: var(--azul-oscuro); color: var(--blanco); padding: 60
     padding: 5px 0;
 }
 
-/* Comportamiento del logo en pantallas pequeÃ±as (Celulares) */
+/* Comportamiento del logo en pantallas pequeñas (Celulares) */
 @media (max-width: 768px) {
     .logo img {
-        height: 45px; /* Reducimos un poco el tamaÃ±o para que quepa el menÃº mÃ³vil */
+        height: 45px; /* Reducimos un poco el tamaño para que quepa el menú móvil */
     }
 }
