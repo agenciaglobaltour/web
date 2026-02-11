@@ -182,3 +182,60 @@ footer { background-color: var(--azul-oscuro); color: var(--blanco); padding: 60
         height: 45px; /* Reducimos un poco el tamaño para que quepa el menú móvil */
     }
 }
+
+/* --- OPTIMIZACIÓN MÓVIL (MEJORADA) --- */
+@media (max-width: 768px) {
+    /* Ajuste de Texto */
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.6rem !important; }
+    
+    /* Header: Logo arriba y Menú abajo para que no se choquen */
+    header { height: auto; padding: 15px 0; }
+    .navbar { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    /* Menú: Se vuelve una lista vertical limpia */
+    .nav-menu { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 10px; 
+    }
+    .nav-item { 
+        width: 100%; 
+        text-align: center; 
+    }
+    .nav-link { 
+        padding: 10px; 
+        display: block; 
+    }
+
+    /* Submenús (Dropdowns): Ahora se ven debajo del ítem padre */
+    .dropdown-content { 
+        position: static; 
+        width: 100%; 
+        box-shadow: none; 
+        background-color: rgba(255,255,255,0.05); 
+        border: none;
+    }
+    .dropdown-content a { color: var(--blanco); border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    /* Secciones de dos columnas (como el "Nosotros" del Index) */
+    .container div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    /* Ajuste de Imágenes para que no se desborden */
+    img { max-width: 100%; height: auto; }
+    
+    /* Botón flotante más pequeño para que no tape el texto */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
