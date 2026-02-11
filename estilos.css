@@ -1,103 +1,114 @@
-/* --- MEJORAS PARA MENÚ MÓVIL (ACTUALIZADO) --- */
+/* --- ESTILOS GENERALES (VARIABLES) --- */
+:root {
+    --azul-corp: #005286;
+    --azul-oscuro: #003355;
+    --dorado: #C5A059;
+    --blanco: #ffffff;
+    --gris-claro: #f4f6f8;
+    --texto: #333333;
+}
 
-/* 1. Estilos del botón Hamburguesa (oculto en PC) */
-.menu-toggle {
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Open Sans', sans-serif; color: var(--texto); line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+a { text-decoration: none; transition: 0.3s; }
+ul { list-style: none; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- HEADER & NAVEGACIÓN --- */
+header {
+    background-color: var(--azul-corp);
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+
+.logo img { height: 60px; vertical-align: middle; }
+
+/* Menú en Escritorio */
+.nav-menu { display: flex; gap: 5px; height: 100%; align-items: center; }
+.nav-item { position: relative; height: 100%; display: flex; align-items: center; }
+.nav-link {
+    color: var(--blanco);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-link:hover { color: var(--dorado); }
+
+/* Dropdowns (Submenús) */
+.dropdown-content {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
-    padding: 10px;
-}
-
-.menu-toggle span {
-    width: 30px;
-    height: 3px;
+    position: absolute;
     background-color: var(--blanco);
-    border-radius: 2px;
-    transition: 0.3s;
+    min-width: 220px;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--dorado);
+    z-index: 999;
+}
+.dropdown-content a {
+    color: var(--texto);
+    padding: 12px 20px;
+    display: block;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+.dropdown-content a:hover { background-color: var(--gris-claro); color: var(--azul-corp); }
+.nav-item:hover .dropdown-content { display: block; }
+
+/* Botón Cotizar y Hamburguesa */
+.cta-header {
+    background-color: #25D366;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.menu-toggle span { width: 25px; height: 3px; background: white; border-radius: 2px; }
+
+/* --- WHATSAPP FLOAT --- */
+.whatsapp-float {
+    position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+    background-color: #25d366; color: #FFF; border-radius: 50px;
+    text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000; display: flex; align-items: center; justify-content: center;
 }
 
-/* 2. Reglas para tablets y celulares */
+/* --- RESPONSIVE MÓVIL --- */
 @media (max-width: 900px) {
-    header { 
-        height: 70px; 
-        padding: 0; 
-    }
+    header { height: 70px; }
+    .menu-toggle { display: flex; }
+    .cta-header { display: none; }
 
-    .navbar { 
-        flex-direction: row; /* Mantiene logo y hamburguesa en la misma línea */
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-
-    /* Mostrar el botón hamburguesa */
-    .menu-toggle {
-        display: flex;
-    }
-
-    /* Ocultar el botón "Cotizar" del header en móvil para ganar espacio */
-    .cta-header {
-        display: none; 
-    }
-
-    /* Convertir el menú en un panel lateral */
     .nav-menu {
         position: fixed;
-        left: -100%; /* Escondido a la izquierda */
+        left: -100%;
         top: 70px;
         flex-direction: column;
         background-color: var(--azul-corp);
-        width: 100%;
-        height: calc(100vh - 70px);
-        gap: 0;
-        transition: 0.4s ease-in-out;
-        overflow-y: auto;
-        align-items: flex-start;
+        width: 80%;
+        height: 100vh;
+        transition: 0.4s ease;
+        padding-top: 20px;
+        box-shadow: 10px 0 20px rgba(0,0,0,0.3);
     }
-
-    /* Clase que activa el menú (se dispara con el JS) */
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav-link {
-        width: 100%;
-        padding: 20px;
-        justify-content: flex-start;
-        font-size: 1.1rem;
-    }
-
-    /* Ajuste de submenús (dropdowns) en móvil */
-    .dropdown-content {
-        position: static;
-        display: none; /* Se abre al hacer hover o clic */
-        width: 100%;
-        background-color: var(--azul-oscuro);
-        box-shadow: none;
-    }
-
-    .nav-item:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown-content a {
-        color: rgba(255,255,255,0.8);
-        padding-left: 40px;
-    }
-
-    /* Ajustes de Hero para que el texto no sea tan grande en celular */
-    .hero h1 { font-size: 1.8rem; }
-    .hero p { font-size: 1rem; }
-}
-
-/* Ajuste específico para el logo en móviles pequeños */
-@media (max-width: 480px) {
-    .logo img {
-        height: 45px !important;
-    }
+    .nav-menu.active { left: 0; }
+    .nav-item { width: 100%; height: auto; }
+    .nav-link { padding: 15px 25px; width: 100%; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    
+    .dropdown-content { position: static; width: 100%; background: var(--azul-oscuro); display: none; border: none; }
+    .nav-item:hover .dropdown-content { display: block; }
 }
