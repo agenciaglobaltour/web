@@ -159,14 +159,50 @@ footer { background-color: var(--azul-oscuro); color: var(--blanco); padding: 60
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    header { height: auto; padding: 15px 0; }
-    .navbar { flex-direction: column; gap: 15px; }
-    .nav-menu { flex-direction: column; width: 100%; gap: 0; }
-    .nav-item { width: 100%; justify-content: center; flex-direction: column; }
-    .nav-link { padding: 10px; width: 100%; justify-content: center; }
-    .dropdown-content { position: relative; top: 0; width: 100%; text-align: center; box-shadow: none; border-top: none; background: #f9f9f9; }
-    .hero h1 { font-size: 2rem; }
+/* --- OPTIMIZACIÓN MÓVIL FINAL --- */
+@media (max-width: 768px) {
+    /* 1. Ajuste del Header: Logo arriba, Menú abajo */
+    header { 
+        height: auto !important; 
+        padding: 15px 0; 
+    }
+    .navbar { 
+        flex-direction: column !important; 
+        gap: 15px; 
+    }
+    .nav-menu { 
+        flex-direction: column !important; 
+        width: 100%; 
+        gap: 8px !important; 
+    }
+    .nav-item { width: 100%; text-align: center; }
+    .nav-link { padding: 10px; font-size: 1rem; }
+
+    /* 2. Submenús (Dropdowns): Evitamos que se pierdan a los lados */
+    .dropdown-content { 
+        position: static !important; 
+        width: 100% !important; 
+        box-shadow: none !important; 
+        background: rgba(0,0,0,0.05) !important; 
+    }
+
+    /* 3. Hero y Títulos: Reducimos tamaño para que no se corten */
+    .hero h1 { 
+        font-size: 1.8rem !important; 
+        padding: 0 10px;
+    }
+    .hero { height: 60vh !important; }
+
+    /* 4. Index: El Flexbox de 'Nosotros' debe ser vertical */
+    .container div[style*="display: flex"] {
+        flex-direction: column !important;
+    }
+    
+    /* 5. Imágenes: Que nunca se salgan de la pantalla */
+    img { 
+        max-width: 100% !important; 
+        height: auto !important; 
+    }
 }
 
 /* Contenedor del logo en el header */
@@ -239,3 +275,4 @@ footer { background-color: var(--azul-oscuro); color: var(--blanco); padding: 60
         font-size: 25px;
     }
 }
+
